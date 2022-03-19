@@ -1,0 +1,35 @@
+<!-- 1.image的基本使用 -->
+<!-- 
+  重点：
+  1.image可以写成单标签，也可以写成双标签
+  2.image组件默认有自己的大小: 320X240(在任何屏下都是如此)，即使没有src属性
+  3.image是行内块级元素(display: inline-block)，一般行内元素不能自己设置宽度和高度，但是image组件可以自己设置宽度和高度
+ -->
+ <image/>
+ <text>haha哈</text>
+
+ <!-- 2.src属性：本地路径（相对和绝对都行）/远程地址 -->
+ <view>绝对路径展示图片:</view>
+ <image src="/assets/test18.jpeg"/>
+ <view>相对路径展示图片:</view>
+ <image src="../../assets/test18.jpeg"/>
+
+<view>远程图片就不测试了</view>
+
+<!-- 3.让用户选择相册中的图片 -->
+<button bind:tap="handleChooseAlbum">选中图片</button>
+<!-- 4.bindload 监听图片加载完成 -->
+<image src="{{avatar}}" bindload="handleImageLoaded"></image>
+
+<!-- 5.lazy-load: 图片即将进入屏幕的上下三屏范围内的时候，才开始加载
+默认为false -->
+
+<!-- 6.长按识别二维码show-menu-by-longpress -->
+<view>长按识别二维码show-menu-by-longpress</view>
+<image src="../../assets/test18.jpeg" show-menu-by-longpress></image>
+
+<!-- 7.image的mode
+默认是scaleToFill 使图片的宽高完全拉伸至填满image元素
+测试的图片建议选尺寸较小的图片
+经常用的配置：width:100%+mode="widthFix" -->
+<image src="../../assets/test18.jpeg" mode="bottom"></image>
