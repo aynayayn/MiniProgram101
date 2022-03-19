@@ -1,0 +1,27 @@
+<view>---------------template的定义与使用-----------------</view>
+<!-- 1.template的第一种使用 -->
+<!-- <template name="content-item">
+  <button size="mini">{{buttonText}}</button>
+  <view>{{viewText}}</view>
+</template> -->
+
+<!-- <template is="content-item" data="{{buttonText: 'XXX', viewText: 'YYY'}}"/>
+<template is="content-item" data="{{buttonText: 'ZZZ', viewText: 'AAA'}}"/> -->
+
+<!-- 2.template的第二种使用：使用import导入template -->
+<!-- 绝对路径和相对路径都是可以的 -->
+<import src="/wxml/template1" />
+<import src="/wxml/abc" />
+
+<template is="content-item" data="{{buttonText: 'XXX', viewText: 'YYY'}}"/>
+<template is="content-item" data="{{buttonText: 'ZZZ', viewText: 'AAA'}}"/>
+<template is="abc"></template>
+
+<!-- include不能导入模板template，但可以将目标文件中除了template和wxs外的整个代码导入 -->
+<!-- <include src="/wxml/template1" /> -->
+<!-- <template is="content-item" data="{{buttonText: 'XXX', viewText: 'YYY'}}"/>
+<template is="content-item" data="{{buttonText: 'ZZZ', viewText: 'AAA'}}"/> -->
+
+<!-- 3. 使用include导入除了template和wxs外的代码，而且仅导入就可以看见-->
+<include src="../../wxml/header"  />
+<include src="../../wxml/footer"  />

@@ -1,0 +1,7 @@
+<!-- 不能套娃import导入其他的wxml -->
+
+<!-- <include src="./abc" /> -->
+<template name="content-item">
+  <button size="mini">{{buttonText}}</button>
+  <view>{{viewText}}</view>
+</template>

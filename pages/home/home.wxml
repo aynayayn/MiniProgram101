@@ -1,3 +1,7 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World!</text>
 <button size="mini">按钮</button>
+
+<import src="/wxml/template1" />
+
+<template is="content-item" data="{{buttonText: 'XXX', viewText: 'YYY'}}"/>

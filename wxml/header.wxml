@@ -1,0 +1,4 @@
+<view>
+  <include src="./navigation" />
+  <view>标题</view>
+</view>
