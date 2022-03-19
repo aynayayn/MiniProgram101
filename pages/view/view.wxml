@@ -1,0 +1,23 @@
+<!--pages/view/view.wxml-->
+<!-- 1.view的基本使用:块级元素，独占一行，通常作容器组件 -->
+<view>
+  <text>123</text>
+  <button>123</button>
+  <text>456</text>
+</view>
+
+<view>789</view>
+
+<!-- 2.hover-class: 当用户按下组件时，显示的状态 -->
+<!-- hover-stop-propagation="{{false}}" 不能阻止向上冒泡；
+hover-stop-propagation="" 不能阻止向上冒泡，因为空字符串的boolean值就是false;
+hover-stop-propagation="false" 可以阻止向上冒泡，因为false这个字符串的boolean值就是true;
+一般在开发中直接写hover-stop-propagation-->
+<view class="box2"
+      hover-class="box2-hover"
+      hover-stay-time="0">
+  <view class="box1"
+      hover-class="hover-view"
+      hover-stay-time="0"
+      hover-stop-propagation>123</view>
+</view>
