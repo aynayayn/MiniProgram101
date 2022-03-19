@@ -1,0 +1,24 @@
+<!--pages/text/text.wxml-->
+<!-- 1.基本使用 -->
+<text>哈哈哈</text>
+<text>您好，小程序\n</text>
+<text>换行后\n</text>
+
+<!-- 2.text组件的常用属性-01:selectable -->
+<!-- 默认情况下text中的文本长按是不能选中的 -->
+<!-- 请在真机上进行测试 -->
+<text selectable="{{true}}">Hello Toby!\n</text>
+<text selectable="true">Hello Toby!\n</text>
+<text selectable>Hello Toby!\n</text>
+
+<!-- 3.text组件的常用属性-02：space -->
+<!-- ensp: 半个中文字符空格大小 -->
+<!-- emsp: 中文字符空格大小 -->
+<text>Hello World!\n</text>
+<text space="nbsp">Hello World, toby!\n</text>
+<text space="ensp">Hello World, toby!\n</text>
+<text space="emsp">Hello World, toby!\n</text>
+
+<!-- 4. text组件的常用属性-03：decode-->
+<text decode="{{true}}">5 &gt; 3\n</text>
+<text decode>5 &gt; 3\n</text>
