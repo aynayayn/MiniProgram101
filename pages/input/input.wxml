@@ -1,0 +1,37 @@
+<!-- 1.input的基本使用 -->
+<input type="text"/>
+
+<!-- 2.input中的默认值 -->
+<input value="哈哈哈"/>
+
+<!-- 3.type: 决定键盘的类型
+ text:文本输入键盘
+ number:数字键盘
+ idcard:身份证键盘
+ digit:带小数点的数字键盘-->
+ <input type="idcard"/>
+
+ <!-- 4.password属性：决定显示的是明文还是暗文 -->
+ <input password />
+
+<!-- 5.placehoder 提示文字 -->
+<input type="text" placeholder="请输入内容"/>
+
+<!-- 6.confirm-type 键盘的关键文本的值 -->
+<view>键盘的关键文本的值send</view>
+<input confirm-type="send"/>
+<view>键盘的关键文本的值search</view>
+<input confirm-type="search"/>
+<view>键盘的关键文本的值next</view>
+<input confirm-type="next"/>
+<view>键盘的关键文本的值go</view>
+<input confirm-type="go"/>
+<view>键盘的关键文本的值done</view>
+<input confirm-type="done"/>
+
+<!-- 7.input绑定事件 -->
+<input 
+  bindinput="handleInput223" 
+  bindfocus="handleFocus" 
+  bindblur="handleBlur" 
+  bindconfirm="handleConfirm"/>

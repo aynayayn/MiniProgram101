@@ -39,7 +39,7 @@
     "minifyWXML": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
+  "libVersion": "2.23.0",
   "appid": "wx721826cb7be425ab",
   "projectname": "miniprogram101",
   "debugOptions": {
