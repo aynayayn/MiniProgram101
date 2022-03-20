@@ -1,0 +1,32 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- 1.错误的写法 -->
+<!-- <text>{{25.6666.toFixed(2)}}</text> -->
+
+<!-- 2.无效的写法 -->
+<text>{{numberToFixed(25.6666)}}</text>
+
+<!-- 3.wxs的定义方式-01:在wxml文件中直接定义 -->
+<!-- <wxs module="info">
+  var message = 'Hello world!';
+  var name = "coderwhy";
+
+  var sum = function(num1, num2) {
+    return num1 + num2;
+  }
+
+  module.exports = {
+    message: message,
+    sum: sum,
+    name: name
+  }
+</wxs> -->
+
+<!-- 4.wxs的定义方式-02：定义在单独的wxs文件中，再使用wxs标签进行导入 -->
+<wxs src="../../wxs/info.wxs" module="info"></wxs>
+<view>{{info.message}}</view>
+<view>{{info.sum(1, 2)}}</view>
+
+<!-- 5.wxs的应用 -->
+<wxs src="../../wxs/format.wxs" module="formatter"></wxs>
+<view>{{formatter.priceFormatter(price, 3)}}</view>
+<view>{{formatter.timestampFormatter(timestamp)}}</view>
